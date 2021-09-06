@@ -16,26 +16,23 @@ export const CalenderEvents = () => {
     all: [],
   });
 
-  const fetchData = React.useCallback(
-    async (arg: string) => {
-      let temp = await AsyncStorage.getItem('@eventsArray');
-      if (temp && temp.length > 0) {
-        let test = JSON.parse(temp);
-        let arr = [...test].sort(
-          (a: EventsData, b: EventsData) =>
-            new Date(a.startAt).valueOf() - new Date(b.startAt).valueOf(),
-        );
-        if (arg === 'date') {
-          arr = arr.filter(a => a.date === selectedDate);
-        }
-        setListData({
-          disp: arr,
-          all: arr,
-        });
+  const fetchData = React.useCallback(async (arg: string, date: string) => {
+    let temp = await AsyncStorage.getItem('@eventsArray');
+    if (temp && temp.length > 0) {
+      let test = JSON.parse(temp);
+      let arr = [...test].sort(
+        (a: EventsData, b: EventsData) =>
+          new Date(a.startAt).valueOf() - new Date(b.startAt).valueOf(),
+      );
+      if (arg === 'date') {
+        arr = arr.filter(a => a.date === date);
       }
-    },
-    [selectedDate],
-  );
+      setListData({
+        disp: arr,
+        all: arr,
+      });
+    }
+  }, []);
 
   return (
     <View style={styles.container}>
@@ -49,7 +46,7 @@ export const CalenderEvents = () => {
         <CalenderView
           setSelectedDate={(arg: string) => {
             setSelectedDate(arg);
-            fetchData('date');
+            fetchData('date', arg);
           }}
         />
       </View>
@@ -57,7 +54,10 @@ export const CalenderEvents = () => {
         {selectedDate.length > 0 && (
           <Text style={styles.txt}>Events for {selectedDate}</Text>
         )}
-        <ListCard listData={listData.disp} fetchData={() => fetchData('')} />
+        <ListCard
+          listData={listData.disp}
+          fetchData={() => fetchData('', '')}
+        />
       </View>
     </View>
   );
