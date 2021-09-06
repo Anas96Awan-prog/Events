@@ -1,3 +1,4 @@
+
 # Events
 This React-Native init project
 
@@ -13,3 +14,9 @@ npx react-native ios
 ## About Task
 
 Event listing App, with Form to Create Update the Event's Details
+
+
+![Simulator Screen Shot - iPhone 11 - 2021-09-06 at 09 22 29](https://user-images.githubusercontent.com/55573289/132160308-52c13725-1298-4693-8aba-ef0c03be79e9.png)
+![Simulator Screen Shot - iPhone 11 - 2021-09-06 at 09 22 22](https://user-images.githubusercontent.com/55573289/132160314-b74cdf24-a1e1-4f5f-b79b-0f74b00c9086.png)
+![Simulator Screen Shot - iPhone 11 - 2021-09-06 at 09 22 16](https://user-images.githubusercontent.com/55573289/132160315-28e3bcc9-f77a-4205-839c-c49951865042.png)
+![Simulator Screen Shot - iPhone 11 - 2021-09-06 at 09 22 14](https://user-images.githubusercontent.com/55573289/132160317-aa14ce9d-535a-4392-972d-26fefde54f84.png)
