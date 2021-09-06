@@ -1,6 +1,9 @@
 # Events
 This React-Native init project
 
+# do First
+yarn
+
 # for Android
 npx react-native run-android
 
