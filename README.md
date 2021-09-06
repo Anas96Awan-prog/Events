@@ -5,4 +5,4 @@ for Android
 npx react-native run-android
 
 for ios
-npx react-
+npx react-native ios
