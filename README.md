@@ -14,7 +14,13 @@ npx react-native ios
 ## About Task
 
 Event listing App, with Form to Create Update the Event's Details
-
+ -> Moment.js, to sort out conflicts between time slots
+ -> AsyncStorage, to manage/store data locally
+ -> TypeScript, for proper logic layering,
+ -> Events Creation,Updation and Deletion Included
+ -> Calendar View, Date click will show list of events for that day
+ -> Infinite Flatlist
+ -> Event Type Filtering
 
 ![Simulator Screen Shot - iPhone 11 - 2021-09-06 at 09 22 29](https://user-images.githubusercontent.com/55573289/132160308-52c13725-1298-4693-8aba-ef0c03be79e9.png)
 ![Simulator Screen Shot - iPhone 11 - 2021-09-06 at 09 22 22](https://user-images.githubusercontent.com/55573289/132160314-b74cdf24-a1e1-4f5f-b79b-0f74b00c9086.png)
